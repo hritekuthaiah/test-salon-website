@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Styling Bar — Suraj Arora | Bengaluru</title>
+  <meta name="description" content="The Styling Bar — Bengaluru's finest barbershop. Precision haircuts, classic shaves, and expert beard styling by Suraj Arora in Virupakshapura.">
+
+  <!-- Favicon — inline SVG brand mark -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080603'/><text x='16' y='23' font-family='Georgia,serif' font-size='15' font-weight='700' fill='%23C9973B' text-anchor='middle'>SB</text></svg>">
+  <meta name="theme-color" content="#080603">
+
+  <!-- Open Graph — controls preview cards when link is shared on WhatsApp, etc. -->
+  <meta property="og:type"        content="business.business">
+  <meta property="og:title"       content="The Styling Bar — Suraj Arora | Bengaluru">
+  <meta property="og:description" content="Bengaluru's finest barbershop. Precision haircuts, classic shaves, and expert beard styling by Suraj Arora in Virupakshapura.">
+  <meta property="og:image"       content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80&auto=format&fit=crop">
+  <meta property="og:locale"      content="en_IN">
+  <meta property="og:site_name"   content="The Styling Bar">
+  <!-- TODO before launch: add og:url once domain is confirmed -->
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="The Styling Bar — Suraj Arora | Bengaluru">
+  <meta name="twitter:description" content="Bengaluru's finest barbershop. Precision haircuts, classic shaves, and expert beard styling by Suraj Arora in Virupakshapura.">
+  <meta name="twitter:image"       content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80&auto=format&fit=crop">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Local Business Schema — powers Google Knowledge Panel & rich search results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "The Styling Bar",
+    "description": "Bengaluru's finest barbershop. Precision haircuts, classic shaves, and expert beard styling by Suraj Arora.",
+    "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80&auto=format&fit=crop",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "28, Kodigehalli – Thindlu Main Rd, above LJ Iyengar Bakery, opp. ICICI Bank ATM",
+      "addressLocality": "Virupakshapura",
+      "addressRegion": "Karnataka",
+      "postalCode": "560097",
+      "addressCountry": "IN"
+    },
+    "telephone": "+919779354926",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "10:00", "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "09:00", "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "10:00", "closes": "19:00"
+      }
+    ],
+    "sameAs": ["https://www.instagram.com/the_styling_bar____/"],
+    "priceRange": "₹₹",
+    "founder": {
+      "@type": "Person",
+      "name": "Suraj Arora",
+      "jobTitle": "Founder & Hair Artist"
+    }
+  }
+  </script>
+
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────── */
+    :root {
+      --bg-0:       #080603;
+      --bg-1:       #0D0907;
+      --bg-2:       #17110A;
+      --bg-3:       #1E1710;
+      --gold:       #C9973B;
+      --gold-l:     #E8B96B;
+      --gold-xd:    rgba(201,151,59,.10);
+      --gold-dim:   rgba(201,151,59,.18);
+      --gold-mid:   rgba(201,151,59,.40);
+      --cream:      #EFE1C4;
+      --cream-2:    #9C8770;
+      --cream-3:    rgba(239,225,196,.07);
+      --z-nav:      100;
+      --z-menu:     90;
+      --ease-out:   cubic-bezier(.16,1,.3,1);
+    }
+
+    /* ─── RESET ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+      background: var(--bg-1);
+      color: var(--cream);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { background: none; border: none; cursor: pointer; font: inherit; color: inherit; }
+
+    /* ─── UTILITIES ───────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section-label {
+      display: inline-block;
+      font-size: .63rem;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 22px; height: 1px;
+      background: var(--gold);
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.8vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--cream);
+    }
+    .section-title em { font-style: italic; color: var(--gold-l); }
+    .rule {
+      width: 44px; height: 1px;
+      background: var(--gold);
+      margin: 1.4rem 0;
+    }
+    .rule-center { margin: 1.4rem auto; }
+
+    /* ─── SCROLL REVEAL ───────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .75s var(--ease-out), transform .75s var(--ease-out);
+    }
+    .reveal.in { opacity: 1; transform: none; }
+    .d1 { transition-delay: .10s; }
+    .d2 { transition-delay: .20s; }
+    .d3 { transition-delay: .30s; }
+    .d4 { transition-delay: .40s; }
+    .d5 { transition-delay: .50s; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────── */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: var(--z-nav);
+      padding: 1.4rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background .45s ease, border-color .45s ease, padding .3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    #nav.scrolled {
+      background: rgba(8,6,3,.94);
+      border-bottom-color: var(--gold-dim);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding-top: .95rem;
+      padding-bottom: .95rem;
+    }
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      white-space: nowrap;
+    }
+    .nav-brand em { font-style: normal; color: var(--gold); }
+    .nav-links {
+      display: flex; align-items: center; gap: 2.2rem; list-style: none;
+    }
+    .nav-links a {
+      font-size: .64rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--cream-2);
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-book {
+      display: inline-block;
+      padding: .5rem 1.35rem;
+      border: 1px solid var(--gold);
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      transition: background .22s, color .22s;
+    }
+    .nav-book:hover {
+      background: var(--gold);
+      color: var(--bg-0);
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+      cursor: pointer;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--cream);
+      transition: transform .3s, opacity .3s;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: rotate(45deg) translate(4.7px,4.7px); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: rotate(-45deg) translate(4.7px,-4.7px); }
+
+    /* Mobile menu */
+    #mobile-menu {
+      display: none;
+      position: fixed; inset: 0;
+      z-index: var(--z-menu);
+      background: rgba(8,6,3,.97);
+      flex-direction: column; align-items: center; justify-content: center;
+      gap: 2.2rem;
+    }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--cream);
+      transition: color .2s;
+    }
+    #mobile-menu a:hover { color: var(--gold); }
+    #mobile-menu .close-btn {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      font-size: 1.6rem; color: var(--cream-2);
+      cursor: pointer; padding: .5rem;
+    }
+
+    /* ─── HERO ────────────────────────────────────────────── */
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex; align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1920&q=80&auto=format&fit=crop')
+                  center 30% / cover no-repeat;
+      transform: scale(1.06);
+      will-change: transform;
+    }
+    .hero-veil {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(110deg, rgba(8,6,3,.93) 0%, rgba(8,6,3,.78) 45%, rgba(8,6,3,.55) 100%),
+        linear-gradient(to top, rgba(8,6,3,.7) 0%, transparent 40%);
+    }
+    /* SVG noise grain */
+    .hero-grain {
+      position: absolute; inset: 0; pointer-events: none;
+      opacity: .035;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 300px;
+    }
+
+    .hero-inner {
+      position: relative; z-index: 2;
+      width: 100%; padding: 9rem 2rem 6rem;
+      max-width: 860px;
+    }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: .62rem; font-weight: 600;
+      letter-spacing: .24em; text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0; transform: translateY(14px);
+      animation: fadeUp .8s var(--ease-out) .15s forwards;
+    }
+    .hero-kicker::before {
+      content: ''; display: block; width: 26px; height: 1px;
+      background: var(--gold); flex-shrink: 0;
+    }
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.4rem, 8vw, 7rem);
+      font-weight: 300; line-height: 1.05;
+      color: var(--cream);
+      margin-top: 1.2rem; margin-bottom: 1.4rem;
+      opacity: 0; transform: translateY(22px);
+      animation: fadeUp .95s var(--ease-out) .35s forwards;
+    }
+    .hero-h1 em {
+      font-style: italic; color: var(--gold-l);
+      display: block;
+    }
+    .hero-sub {
+      font-size: .92rem; font-weight: 300; line-height: 1.8;
+      color: var(--cream-2); max-width: 460px;
+      margin-bottom: 2.6rem;
+      opacity: 0; transform: translateY(14px);
+      animation: fadeUp .85s var(--ease-out) .55s forwards;
+    }
+    .hero-btns {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      opacity: 0; transform: translateY(14px);
+      animation: fadeUp .85s var(--ease-out) .72s forwards;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: .65rem;
+      padding: .9rem 2rem;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .68rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; cursor: pointer;
+      transition: transform .22s var(--ease-out), background .22s, color .22s, border-color .22s;
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-gold {
+      background: var(--gold); color: var(--bg-0);
+    }
+    .btn-gold:hover { background: var(--gold-l); }
+    .btn-ghost {
+      border: 1px solid rgba(239,225,196,.28); color: var(--cream);
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-wa {
+      background: #25D366; color: #fff;
+    }
+    .btn-wa:hover { background: #1cb957; }
+    .btn-ring {
+      border: 1px solid var(--gold-dim); color: var(--cream);
+    }
+    .btn-ring:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-scroll {
+      position: absolute; bottom: 2.5rem; left: 2rem;
+      display: flex; flex-direction: column; align-items: center; gap: .5rem;
+      opacity: 0; animation: fadeUp .8s var(--ease-out) 1.1s forwards;
+    }
+    .hero-scroll-line {
+      width: 1px; height: 54px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2.2s ease infinite;
+    }
+    .hero-scroll span {
+      font-size: .55rem; letter-spacing: .22em;
+      text-transform: uppercase; color: var(--cream-2);
+      writing-mode: vertical-rl;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: .35; }
+      50%       { opacity: 1; }
+    }
+
+    /* ─── ABOUT ───────────────────────────────────────────── */
+    #about {
+      padding: 7rem 0;
+      background: var(--bg-0);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5.5rem; align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-wrap img {
+      width: 100%; aspect-ratio: 3/4;
+      object-fit: cover; object-position: center top;
+      display: block;
+    }
+    .about-frame {
+      position: absolute; top: 18px; left: -18px;
+      right: 18px; bottom: -18px;
+      border: 1px solid var(--gold-dim);
+      pointer-events: none; z-index: 0;
+    }
+    .about-img-wrap img { position: relative; z-index: 1; }
+    .about-badge {
+      position: absolute; bottom: -1.25rem; right: -1.25rem;
+      z-index: 2;
+      background: var(--bg-2);
+      border: 1px solid var(--gold-dim);
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+    }
+    .about-badge .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem; font-weight: 600;
+      color: var(--gold); line-height: 1;
+    }
+    .about-badge .lbl {
+      font-size: .58rem; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--cream-2);
+      margin-top: .3rem; line-height: 1.4;
+    }
+    .about-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.9rem; font-weight: 500; font-style: italic;
+      color: var(--cream); line-height: 1.1;
+    }
+    .about-role {
+      font-size: .62rem; font-weight: 600;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gold); margin-top: .4rem;
+    }
+    .about-bio {
+      font-size: .9rem; font-weight: 300; line-height: 1.9;
+      color: var(--cream-2); margin-bottom: 1rem;
+    }
+    .about-traits {
+      display: flex; flex-wrap: wrap; gap: .6rem;
+      margin-top: 1.5rem;
+    }
+    .trait {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .66rem; letter-spacing: .08em;
+      color: var(--cream-2);
+    }
+    .trait::before {
+      content: '';
+      display: block; width: 5px; height: 5px;
+      background: var(--gold);
+      clip-path: polygon(50% 0%,100% 50%,50% 100%,0% 50%);
+      flex-shrink: 0;
+    }
+
+    /* ─── SERVICES ────────────────────────────────────────── */
+    #services {
+      padding: 7rem 0;
+      background: var(--bg-1);
+    }
+    .services-hd { text-align: center; margin-bottom: 3.5rem; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.1rem;
+    }
+    .svc-card {
+      position: relative; overflow: hidden;
+      background: var(--bg-2);
+      border: 1px solid var(--gold-dim);
+      padding: 2rem 1.75rem;
+      cursor: pointer;
+      transition: transform .35s var(--ease-out), border-color .3s, box-shadow .35s, background .3s;
+    }
+    .svc-card::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(201,151,59,.07) 0%, transparent 55%);
+      opacity: 0; transition: opacity .3s;
+      pointer-events: none; /* must not swallow clicks meant for the Book link */
+    }
+    .svc-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--gold-mid);
+      background: var(--bg-3);
+      box-shadow: 0 24px 60px rgba(0,0,0,.55), 0 0 32px rgba(201,151,59,.07);
+    }
+    .svc-card:hover::after { opacity: 1; }
+    .svc-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem; font-weight: 300;
+      color: var(--gold); opacity: .3;
+      line-height: 1; margin-bottom: 1.4rem;
+      letter-spacing: .08em;
+      transition: opacity .4s var(--ease-out);
+    }
+    .svc-card:hover .svc-num { opacity: .88; }
+    .svc-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem; font-weight: 500;
+      color: var(--cream); margin-bottom: .45rem;
+    }
+    .svc-desc {
+      font-size: .8rem; font-weight: 300; line-height: 1.7;
+      color: var(--cream-2); margin-bottom: 1.5rem;
+    }
+    .svc-foot {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--gold-dim);
+    }
+    .svc-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; font-weight: 600; color: var(--gold);
+    }
+    .svc-price sub {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .62rem; font-weight: 400;
+      color: var(--cream-2); bottom: 0; margin-right: 2px;
+    }
+    .svc-cta {
+      position: relative; overflow: hidden;
+      font-size: .6rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--cream-2);
+      border: 1px solid var(--gold-dim);
+      padding: .38rem .9rem;
+      transition: background .22s, color .22s, border-color .22s,
+                  transform .22s var(--ease-out), box-shadow .22s;
+      cursor: pointer;
+    }
+    .svc-cta::before {
+      content: '';
+      position: absolute; top: 0; left: -120%;
+      width: 55%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+      pointer-events: none; transition: none;
+    }
+    .svc-card:hover .svc-cta {
+      background: var(--gold); color: var(--bg-0);
+      border-color: var(--gold);
+    }
+    .svc-card:hover .svc-cta:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 8px 24px rgba(201,151,59,.5);
+    }
+    .svc-card:hover .svc-cta:hover::before {
+      left: 160%;
+      transition: left .5s ease;
+    }
+
+    /* Touch devices: service Book CTAs are hover-only on desktop,
+       so force them always visible on touch (no hover state available) */
+    @media (hover: none) {
+      .svc-card .svc-cta {
+        background: var(--gold);
+        color: var(--bg-0);
+        border-color: var(--gold);
+      }
+      .svc-card .svc-num { opacity: .55; }
+    }
+
+    /* ─── GALLERY ─────────────────────────────────────────── */
+    #gallery {
+      padding: 7rem 0;
+      background: var(--bg-0);
+    }
+    .gallery-hd { text-align: center; margin-bottom: 3rem; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 280px;
+      gap: .75rem;
+    }
+    .gallery-item {
+      position: relative; overflow: hidden; cursor: pointer;
+    }
+    .gallery-item:nth-child(1) { grid-column: 1/3; grid-row: 1/3; }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .65s var(--ease-out);
+    }
+    .gallery-item:hover img { transform: scale(1.07); }
+    .gallery-veil {
+      position: absolute; inset: 0;
+      background: rgba(8,6,3,.68);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: .5rem;
+      opacity: 0; transition: opacity .35s;
+    }
+    .gallery-item:hover .gallery-veil { opacity: 1; }
+    .gallery-veil svg { color: var(--gold); }
+    .gallery-veil span {
+      font-size: .62rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--gold);
+    }
+
+    /* ─── BOOKING ─────────────────────────────────────────── */
+    #booking {
+      padding: 7rem 0;
+      background: var(--bg-1);
+      text-align: center;
+    }
+    .booking-inner { max-width: 580px; margin: 0 auto; }
+    .booking-sub {
+      font-size: .88rem; font-weight: 300; line-height: 1.85;
+      color: var(--cream-2); margin-bottom: 2.4rem;
+    }
+    .booking-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── LOCATION ────────────────────────────────────────── */
+    #location {
+      padding: 7rem 0;
+      background: var(--bg-0);
+    }
+    .location-hd { margin-bottom: 3.5rem; }
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem; align-items: start;
+    }
+    .loc-item {
+      display: flex; gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .loc-icon {
+      width: 18px; height: 18px; flex-shrink: 0;
+      color: var(--gold); margin-top: 3px;
+    }
+    .loc-lbl {
+      font-size: .58rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--cream-2); margin-bottom: .3rem;
+    }
+    .loc-val {
+      font-size: .88rem; font-weight: 300;
+      line-height: 1.7; color: var(--cream);
+    }
+    .loc-val a { transition: color .2s; }
+    .loc-val a:hover { color: var(--gold); }
+    .hours-card {
+      background: var(--bg-2);
+      border: 1px solid var(--gold-dim);
+      padding: 1.75rem 2rem;
+      margin-top: 1rem;
+    }
+    .hours-title {
+      font-size: .6rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem;
+    }
+    .hour-row {
+      display: flex; justify-content: space-between;
+      font-size: .83rem; font-weight: 300;
+      padding: .48rem 0;
+      border-bottom: 1px solid rgba(201,151,59,.07);
+      color: var(--cream-2);
+    }
+    .hour-row:last-child { border-bottom: none; }
+    .hour-row .day { color: var(--cream); font-weight: 400; }
+    .map-btn {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 1rem; text-align: center;
+      width: 100%; aspect-ratio: 4/3;
+      background: var(--bg-2);
+      border: 1px solid var(--gold-dim);
+      padding: 2rem; cursor: pointer;
+      transition: border-color .25s, background .25s;
+      color: var(--cream-2);
+    }
+    .map-btn:hover { border-color: var(--gold-mid); background: var(--bg-3); }
+    .map-btn svg { color: var(--gold); }
+    .map-btn p { font-size: .8rem; font-weight: 300; line-height: 1.6; }
+    .map-btn .dir {
+      font-size: .62rem; font-weight: 600; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--gold);
+      border-bottom: 1px solid rgba(201,151,59,.3); padding-bottom: 1px;
+    }
+
+    /* ─── FOOTER ──────────────────────────────────────────── */
+    footer {
+      background: var(--bg-0);
+      border-top: 1px solid var(--gold-dim);
+      padding: 3.5rem 0 2rem;
+    }
+    .ft-top {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; flex-wrap: wrap; gap: 2rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(201,151,59,.07);
+    }
+    .ft-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem; font-weight: 600; letter-spacing: .05em;
+    }
+    .ft-brand em { font-style: normal; color: var(--gold); }
+    .ft-tag {
+      font-size: .68rem; font-weight: 300;
+      color: var(--cream-2); margin-top: .35rem; letter-spacing: .08em;
+    }
+    .ft-nav { display: flex; gap: 2rem; flex-wrap: wrap; align-self: center; }
+    .ft-nav a {
+      font-size: .63rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--cream-2);
+      transition: color .2s; cursor: pointer;
+    }
+    .ft-nav a:hover { color: var(--gold); }
+    .ft-social a {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .63rem; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase;
+      border: 1px solid var(--gold-dim);
+      padding: .5rem 1.1rem;
+      color: var(--cream-2);
+      transition: color .22s, border-color .22s;
+      cursor: pointer;
+    }
+    .ft-social a:hover { color: var(--gold); border-color: var(--gold-mid); }
+    .ft-bottom {
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: .5rem;
+      padding-top: 1.75rem;
+    }
+    .ft-copy { font-size: .65rem; color: var(--cream-2); letter-spacing: .06em; }
+    .ft-addr { font-size: .65rem; color: var(--cream-2); text-align: right; line-height: 1.55; }
+
+    /* ─── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { gap: 3.5rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      #hero .hero-inner { padding: 7rem 1.25rem 5rem; }
+      .hero-h1 { font-size: clamp(3rem, 11vw, 4.5rem); }
+      .hero-scroll { left: 1.25rem; }
+
+      .about-grid { grid-template-columns: 1fr; }
+      .about-frame { display: none; }
+      .about-badge { right: 0; }
+
+      .services-grid { grid-template-columns: 1fr; }
+
+      /* Gallery: 2 col, big item spans 2 */
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 220px;
+      }
+      .gallery-item:nth-child(1) { grid-column: 1/3; grid-row: 1/2; }
+
+      .location-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .ft-top { flex-direction: column; }
+      .ft-addr { text-align: left; }
+    }
+    @media (max-width: 500px) {
+      .container { padding: 0 1.25rem; }
+      #about, #services, #testimonials, #gallery, #booking, #location, #instagram { padding: 5rem 0; }
+
+      .hero-btns { flex-direction: column; }
+      .booking-btns { flex-direction: column; align-items: stretch; }
+      .btn { justify-content: center; }
+      #booking .btn-wa, #booking .btn-ring { min-width: 0; width: 100%; }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 240px;
+      }
+      .gallery-item:nth-child(1) { grid-column: 1/2; grid-row: 1/2; }
+    }
+
+    /* ─── INSTAGRAM STRIP ────────────────────────────────── */
+    #instagram {
+      padding: 6rem 0;
+      background: var(--bg-0);
+      border-top: 1px solid var(--gold-dim);
+      border-bottom: 1px solid var(--gold-dim);
+      overflow: hidden;
+    }
+    .ig-top { text-align: center; margin-bottom: 1.8rem; }
+    .ig-marquee-wrap {
+      overflow: hidden;
+      margin: 0 -4rem 2.4rem;
+      mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    }
+    .ig-marquee {
+      display: flex; align-items: center; gap: 0;
+      width: max-content;
+      animation: igMarquee 24s linear infinite;
+    }
+    @keyframes igMarquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .ig-marquee-item {
+      display: flex; align-items: center; gap: 2rem;
+      padding: 0 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      font-weight: 300; font-style: italic;
+      color: var(--cream-2);
+      white-space: nowrap;
+    }
+    .ig-marquee-item:hover { color: var(--cream); }
+    .ig-sep {
+      display: block; width: 5px; height: 5px;
+      background: var(--gold); border-radius: 50%;
+      opacity: .5; flex-shrink: 0;
+    }
+    .ig-bottom { text-align: center; }
+    .ig-sub {
+      font-size: .84rem; font-weight: 300; line-height: 1.85;
+      color: var(--cream-2); margin-bottom: 1.8rem;
+    }
+    .ig-cta {
+      display: inline-flex; align-items: center; gap: .65rem;
+      font-size: .62rem; font-weight: 600; letter-spacing: .16em;
+      text-transform: uppercase;
+      border: 1px solid var(--gold-dim);
+      padding: .7rem 1.75rem;
+      color: var(--cream-2);
+      transition: color .22s, border-color .22s;
+    }
+    .ig-cta:hover { color: var(--gold); border-color: var(--gold-mid); }
+
+    /* ─── ABOUT CTA ─────────────────────────────────────── */
+    .about-cta {
+      display: inline-flex; align-items: center; gap: .5rem;
+      margin-top: 2rem;
+      font-size: .68rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid var(--gold-dim);
+      padding-bottom: 2px;
+      transition: border-color .22s, color .22s, gap .22s var(--ease-out);
+    }
+    .about-cta:hover { border-color: var(--gold); gap: .75rem; }
+
+    /* ─── TESTIMONIALS ───────────────────────────────────── */
+    #testimonials {
+      padding: 7rem 0;
+      background: var(--bg-1);
+      border-top: 1px solid var(--gold-dim);
+    }
+    .testi-hd { text-align: center; margin-bottom: 3rem; }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.1rem;
+    }
+    .testi-card {
+      background: var(--bg-2);
+      border: 1px solid var(--gold-dim);
+      padding: 2.2rem 1.75rem 1.75rem;
+      transition: border-color .3s, box-shadow .3s;
+    }
+    .testi-card:hover {
+      border-color: var(--gold-mid);
+      box-shadow: 0 16px 40px rgba(0,0,0,.4);
+    }
+    .testi-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.5rem; font-weight: 300; font-style: italic;
+      color: var(--gold); opacity: .28;
+      line-height: .75;
+      margin-bottom: 1rem;
+    }
+    .testi-quote {
+      font-size: .9rem; font-weight: 300; line-height: 1.85;
+      color: var(--cream-2); font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    .testi-byline {
+      display: flex; flex-direction: column; gap: .25rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--gold-dim);
+    }
+    .testi-name {
+      font-size: .72rem; font-weight: 600; letter-spacing: .1em;
+      color: var(--cream);
+    }
+    .testi-service {
+      font-size: .59rem; font-weight: 600; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--gold); opacity: .62;
+    }
+
+    /* ── Mobile stacked testimonials carousel ──────────────────
+       Below 900px the grid becomes a position:relative container.
+       JS assigns data-stack="top|mid|bot|gone" to control the
+       z-index, transform and opacity of each card. */
+    @media (max-width: 900px) {
+      .testi-grid {
+        display: block;
+        position: relative;
+        height: 320px; /* CSS fallback — JS overrides via inline style once cards are measured */
+      }
+
+      .testi-card {
+        position: absolute;
+        width: 100%;
+        top: 0; left: 0;
+        transition: transform .4s var(--ease-out), opacity .4s;
+        cursor: grab;
+      }
+      .testi-card:active { cursor: grabbing; }
+
+      /* Resting stack positions — set by JS via data-stack attribute */
+      .testi-card[data-stack="top"] {
+        z-index: 3;
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      .testi-card[data-stack="mid"] {
+        z-index: 2;
+        transform: translateY(12px) rotate(-2deg);
+        opacity: 0.55;
+      }
+      .testi-card[data-stack="bot"] {
+        z-index: 1;
+        transform: translateY(24px) rotate(-4deg);
+        opacity: 0.25;
+      }
+      .testi-card[data-stack="gone"] {
+        z-index: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* During active drag — raw finger tracking, no easing */
+      .testi-card.is-dragging {
+        transition: none !important;
+        cursor: grabbing;
+      }
+
+      /* Dot navigation */
+      .testi-dots {
+        display: flex;
+        justify-content: center;
+        gap: .6rem;
+        margin-top: 1.8rem;
+      }
+      .testi-dot {
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: var(--gold-dim);
+        transition: background .3s;
+        flex-shrink: 0;
+      }
+      .testi-dot.active { background: var(--gold); }
+    }
+
+    /* Desktop: dots hidden */
+    @media (min-width: 901px) {
+      .testi-dots { display: none; }
+    }
+
+    /* ─── BOOKING AVAILABILITY SIGNAL ───────────────────── */
+    .booking-avail {
+      display: inline-flex; align-items: center; gap: .55rem;
+      font-size: .59rem; font-weight: 600; letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--cream-2);
+      margin-bottom: 1.4rem;
+    }
+    .avail-dot {
+      display: inline-block;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #4CAF82; flex-shrink: 0;
+      animation: dotPulse 2.6s ease infinite;
+    }
+    @keyframes dotPulse {
+      0%, 100% { opacity: 1;   box-shadow: 0 0 0 0   rgba(76,175,130,.45); }
+      60%       { opacity: .8; box-shadow: 0 0 0 5px rgba(76,175,130,0);   }
+    }
+    #booking .btn-wa { min-width: 200px; }
+
+    /* ─── FLOATING BOOKING CHIP ──────────────────────────── */
+    #book-chip {
+      position: fixed;
+      bottom: 1.8rem; right: 1.8rem;
+      z-index: 9000;
+      display: inline-flex; align-items: center; gap: .6rem;
+      padding: .65rem 1.4rem;
+      background: rgba(8,6,3,.96);
+      border: 1px solid var(--gold);
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .64rem; font-weight: 600; letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      transform: translateY(130%);
+      opacity: 0;
+      transition: transform .55s var(--ease-out), opacity .55s var(--ease-out),
+                  background .22s, color .22s;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    #book-chip.chip-visible {
+      transform: translateY(0);
+      opacity: 1;
+      animation: chipGlow 4s ease 1.5s infinite;
+    }
+    #book-chip:hover { background: var(--gold); color: var(--bg-0); }
+    @keyframes chipGlow {
+      0%, 100% { box-shadow: 0 2px 12px rgba(201,151,59,.10); }
+      50%       { box-shadow: 0 4px 28px rgba(201,151,59,.26); }
+    }
+    @media (max-width: 500px) {
+      /* On mobile: centred bottom bar — better tap target than a corner pill */
+      #book-chip {
+        left: 50%;
+        right: auto;
+        bottom: 1.2rem;
+        transform: translateX(-50%) translateY(130%);
+        padding: .7rem 2.2rem;
+        min-width: 200px;
+        justify-content: center;
+      }
+      #book-chip.chip-visible {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    /* ─── DOT REVEAL CANVAS ─────────────────────────────── */
+    #dot-reveal {
+      position: fixed; inset: 0;
+      pointer-events: none;
+      z-index: 9997;
+      mix-blend-mode: screen;
+      opacity: 0;
+      /* transition controlled by JS (different speeds for show vs hide) */
+    }
+    @media (prefers-reduced-motion: reduce) { #dot-reveal { display: none !important; } }
+
+    /* ─── REDUCED MOTION ──────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .hero-kicker, .hero-h1, .hero-sub, .hero-btns, .hero-scroll,
+      .reveal { opacity: 1 !important; transform: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- DOT REVEAL -->
+<canvas id="dot-reveal" aria-hidden="true"></canvas>
+
+<!-- FLOATING BOOKING CHIP -->
+<a id="book-chip"
+   href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20an%20appointment."
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Book an appointment via WhatsApp">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.854L.06 23.461a.75.75 0 0 0 .916.915l5.685-1.483A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 0 1-5.207-1.462l-.374-.22-3.876 1.01 1.031-3.793-.244-.388A9.961 9.961 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+  </svg>
+  Book Now
+</a>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Main navigation">
+  <a href="#hero" class="nav-brand">The Styling <em>Bar</em></a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#location">Location</a></li>
+    <li>
+      <a href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20an%20appointment."
+         class="nav-book" target="_blank" rel="noopener noreferrer">Book Now</a>
+    </li>
+  </ul>
+
+  <button class="hamburger" id="ham" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation">
+  <button class="close-btn" id="menu-close" aria-label="Close menu">✕</button>
+  <a href="#about"        class="mm-link">About</a>
+  <a href="#services"    class="mm-link">Services</a>
+  <a href="#testimonials" class="mm-link">Reviews</a>
+  <a href="#gallery"     class="mm-link">Gallery</a>
+  <a href="#location"    class="mm-link">Location</a>
+  <a href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="mm-link">Book Now</a>
+</div>
+
+
+<!-- ─── HERO ─────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-bg" id="hero-bg" role="img" aria-label="Barbershop atmosphere"></div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="hero-grain" aria-hidden="true"></div>
+
+  <div class="hero-inner container">
+    <p class="hero-kicker">Bengaluru's Finest Barbershop</p>
+
+    <h1 class="hero-h1">
+      The Art of<br>the
+      <em>Perfect Cut.</em>
+    </h1>
+
+    <p class="hero-sub">
+      Where old-school craft meets modern precision.
+      Every cut is deliberate. Every visit, an experience.
+    </p>
+
+    <div class="hero-btns">
+      <a href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20an%20appointment."
+         class="btn btn-gold" target="_blank" rel="noopener noreferrer">
+        <!-- WhatsApp -->
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.854L.06 23.461a.75.75 0 0 0 .916.915l5.685-1.483A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 0 1-5.207-1.462l-.374-.22-3.876 1.01 1.031-3.793-.244-.388A9.961 9.961 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+        Book via WhatsApp
+      </a>
+      <a href="#services" class="btn btn-ghost">
+        Explore Services
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+
+<!-- ─── ABOUT ─────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Image -->
+      <div class="about-img-wrap reveal">
+        <div class="about-frame" aria-hidden="true"></div>
+        <img
+          src="https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?w=700&q=80&auto=format&fit=crop"
+          alt="Suraj Arora, Founder & Hair Artist at The Styling Bar"
+          loading="lazy" width="700"
+        >
+        <div class="about-badge" aria-label="5+ years of experience">
+          <div class="num">5<span style="font-size:1.8rem">+</span></div>
+          <div class="lbl">Years of<br>Excellence</div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div>
+        <p class="section-label reveal">Meet Your Barber</p>
+        <div class="about-name reveal d1">Suraj Arora</div>
+        <p class="about-role reveal d1">Founder &amp; Hair Artist</p>
+        <div class="rule reveal d2"></div>
+        <p class="about-bio reveal d2">
+          Suraj built The Styling Bar from a single conviction — that a great haircut
+          is more than a service, it's a ritual. Trained in precision cutting and
+          classic barbering techniques, he brings an artist's eye and a craftsman's
+          hands to every visit.
+        </p>
+        <p class="about-bio reveal d3">
+          Whether it's a sharp fade, a textured crop, or a clean straight-razor shave,
+          each cut is approached with the same level of care — detailed, intentional, personal.
+        </p>
+        <div class="about-traits reveal d4">
+          <span class="trait">Precision Haircuts</span>
+          <span class="trait">Classic Shaves</span>
+          <span class="trait">Beard Styling</span>
+          <span class="trait">Hair Treatments</span>
+          <span class="trait">One-on-One Service</span>
+        </div>
+        <a href="#booking" class="about-cta reveal d5">
+          Book a session with Suraj
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── SERVICES ──────────────────────────────────── -->
+<section id="services">
+  <div class="container">
+    <div class="services-hd">
+      <p class="section-label reveal">What We Offer</p>
+      <h2 class="section-title reveal d1">Our <em>Services</em></h2>
+      <div class="rule rule-center reveal d2"></div>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Haircut -->
+      <div class="svc-card reveal">
+        <div class="svc-num" aria-hidden="true">I</div>
+        <h3 class="svc-name">Signature Haircut</h3>
+        <p class="svc-desc">A tailored cut shaped to your face and style. Includes consultation, cut, and a clean finish.</p>
+        <div class="svc-foot">
+          <span class="svc-price"><sub>from </sub>₹400</span>
+          <a href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20a%20haircut." class="svc-cta" target="_blank" rel="noopener noreferrer">Book</a>
+        </div>
+      </div>
+
+      <!-- Beard -->
+      <div class="svc-card reveal d1">
+        <div class="svc-num" aria-hidden="true">II</div>
+        <h3 class="svc-name">Beard Trim &amp; Shape</h3>
+        <p class="svc-desc">Sharp lines, defined edges, and a groomed finish. Your beard, exactly how you want it.</p>
+        <div class="svc-foot">
+          <span class="svc-price"><sub>from </sub>₹200</span>
+          <a href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20a%20beard%20trim." class="svc-cta" target="_blank" rel="noopener noreferrer">Book</a>
+        </div>
+      </div>
+
+      <!-- Combo -->
+      <div class="svc-card reveal d2">
+        <div class="svc-num" aria-hidden="true">III</div>
+        <h3 class="svc-name">Hair + Beard Combo</h3>
+        <p class="svc-desc">The full treatment — a precision cut paired with an expertly groomed beard. Best value.</p>
+        <div class="svc-foot">
+          <span class="svc-price"><sub>from </sub>₹550</span>
+          <a href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20the%20hair%20%2B%20beard%20combo." class="svc-cta" target="_blank" rel="noopener noreferrer">Book</a>
+        </div>
+      </div>
+
+      <!-- Shave -->
+      <div class="svc-card reveal">
+        <div class="svc-num" aria-hidden="true">IV</div>
+        <h3 class="svc-name">Classic Shave</h3>
+        <p class="svc-desc">Warm towel, straight razor, soothing aftercare. An unhurried ritual from a vanishing era.</p>
+        <div class="svc-foot">
+          <span class="svc-price"><sub>from </sub>₹250</span>
+          <a href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20a%20classic%20shave." class="svc-cta" target="_blank" rel="noopener noreferrer">Book</a>
+        </div>
+      </div>
+
+      <!-- Hair Wash -->
+      <div class="svc-card reveal d1">
+        <div class="svc-num" aria-hidden="true">V</div>
+        <h3 class="svc-name">Hair Wash &amp; Style</h3>
+        <p class="svc-desc">Deep cleanse, conditioning, and a styled finish. Leave feeling fresh and looking sharp.</p>
+        <div class="svc-foot">
+          <span class="svc-price"><sub>from </sub>₹350</span>
+          <a href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20a%20hair%20wash%20and%20style." class="svc-cta" target="_blank" rel="noopener noreferrer">Book</a>
+        </div>
+      </div>
+
+      <!-- Head Massage -->
+      <div class="svc-card reveal d2">
+        <div class="svc-num" aria-hidden="true">VI</div>
+        <h3 class="svc-name">Head Massage</h3>
+        <p class="svc-desc">A traditional Indian head massage with warm oils. Tension melts. The mind quiets. Pure restoration.</p>
+        <div class="svc-foot">
+          <span class="svc-price"><sub>from </sub>₹300</span>
+          <a href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20a%20head%20massage." class="svc-cta" target="_blank" rel="noopener noreferrer">Book</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── TESTIMONIALS ─────────────────────────────── -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testi-hd">
+      <p class="section-label reveal">What Clients Say</p>
+      <h2 class="section-title reveal d1">Trusted by <em>Bengaluru</em></h2>
+      <div class="rule rule-center reveal d2"></div>
+    </div>
+
+    <div class="testi-grid">
+
+      <div class="testi-card reveal">
+        <div class="testi-mark" aria-hidden="true">"</div>
+        <p class="testi-quote">Best haircut I've had in Bengaluru. Suraj takes his time and actually listens to what you want.</p>
+        <div class="testi-byline">
+          <span class="testi-name">Karan M.</span>
+          <span class="testi-service">Signature Haircut</span>
+        </div>
+      </div>
+
+      <div class="testi-card reveal d1">
+        <div class="testi-mark" aria-hidden="true">"</div>
+        <p class="testi-quote">The straight-razor shave felt like a ritual from another era. Came back the following week.</p>
+        <div class="testi-byline">
+          <span class="testi-name">Rohit S.</span>
+          <span class="testi-service">Classic Shave</span>
+        </div>
+      </div>
+
+      <div class="testi-card reveal d2">
+        <div class="testi-mark" aria-hidden="true">"</div>
+        <p class="testi-quote">Knew exactly what would suit my face. Never had to explain twice. Nothing's changed since.</p>
+        <div class="testi-byline">
+          <span class="testi-name">Arjun P.</span>
+          <span class="testi-service">Hair + Beard Combo</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Dot indicators — visible on mobile carousel only -->
+    <div class="testi-dots" aria-hidden="true">
+      <span class="testi-dot active"></span>
+      <span class="testi-dot"></span>
+      <span class="testi-dot"></span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── GALLERY ────────────────────────────────────── -->
+<section id="gallery">
+  <div class="container">
+    <div class="gallery-hd">
+      <p class="section-label reveal">Our Work</p>
+      <h2 class="section-title reveal d1">Crafted with <em>Precision</em></h2>
+      <div class="rule rule-center reveal d2"></div>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop"
+             alt="Barber giving precision haircut" loading="lazy" width="900">
+        <div class="gallery-veil">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>View</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal d1">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80&auto=format&fit=crop"
+             alt="Hair styling at the barbershop" loading="lazy" width="500">
+        <div class="gallery-veil">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>View</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal d2">
+        <img src="https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?w=500&q=80&auto=format&fit=crop"
+             alt="Beard grooming and shaping" loading="lazy" width="500">
+        <div class="gallery-veil">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>View</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal d1">
+        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=500&q=80&auto=format&fit=crop"
+             alt="Clean cut result and finish" loading="lazy" width="500">
+        <div class="gallery-veil">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>View</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal d2">
+        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=500&q=80&auto=format&fit=crop"
+             alt="Taper fade haircut" loading="lazy" width="500">
+        <div class="gallery-veil">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>View</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── INSTAGRAM ────────────────────────────────── -->
+<section id="instagram">
+  <div class="container">
+    <div class="ig-top reveal">
+      <p class="section-label">On Instagram</p>
+    </div>
+  </div>
+
+  <div class="ig-marquee-wrap" aria-hidden="true">
+    <div class="ig-marquee">
+      <!-- Set 1 -->
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>@the_styling_bar____</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>Precision Cuts</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>@the_styling_bar____</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>Classic Shaves</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>@the_styling_bar____</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>Bengaluru</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>@the_styling_bar____</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>The Styling Bar</span></div>
+      <!-- Set 2 — exact duplicate for seamless loop -->
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>@the_styling_bar____</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>Precision Cuts</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>@the_styling_bar____</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>Classic Shaves</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>@the_styling_bar____</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>Bengaluru</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>@the_styling_bar____</span></div>
+      <div class="ig-marquee-item"><span class="ig-sep"></span><span>The Styling Bar</span></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="ig-bottom reveal d1">
+      <p class="ig-sub">Every cut, every craft — documented in real time.</p>
+      <a href="https://www.instagram.com/the_styling_bar____/"
+         class="ig-cta" target="_blank" rel="noopener noreferrer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+        Follow on Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── BOOKING ───────────────────────────────────── -->
+<section id="booking">
+  <div class="container">
+    <div class="booking-inner">
+      <p class="booking-avail reveal">
+        <span class="avail-dot" aria-hidden="true"></span>
+        Accepting bookings &nbsp;·&nbsp; One client at a time
+      </p>
+      <p class="section-label reveal d1">Ready for a Fresh Look?</p>
+      <h2 class="section-title reveal d2">Book Your <em>Appointment</em></h2>
+      <div class="rule rule-center reveal d3"></div>
+      <p class="booking-sub reveal d4">
+        Suraj works one client at a time — book ahead to guarantee your slot.
+        Walk-ins welcome when available.
+      </p>
+      <div class="booking-btns reveal d5">
+        <a href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20an%20appointment."
+           class="btn btn-wa" target="_blank" rel="noopener noreferrer">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.854L.06 23.461a.75.75 0 0 0 .916.915l5.685-1.483A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 0 1-5.207-1.462l-.374-.22-3.876 1.01 1.031-3.793-.244-.388A9.961 9.961 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+          </svg>
+          WhatsApp Us
+        </a>
+        <a href="tel:+919779354926" class="btn btn-ring">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-1.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call +91 97793 54926
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── LOCATION ──────────────────────────────────── -->
+<section id="location">
+  <div class="container">
+    <div class="location-hd">
+      <p class="section-label reveal">Find Us</p>
+      <h2 class="section-title reveal d1">Visit the <em>Shop</em></h2>
+      <div class="rule reveal d2"></div>
+    </div>
+
+    <div class="location-grid">
+      <div>
+        <div class="loc-item reveal">
+          <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <p class="loc-lbl">Address</p>
+            <p class="loc-val">
+              28, Kodigehalli – Thindlu Main Rd<br>
+              Above LJ Iyengar Bakery, Opp. ICICI Bank ATM<br>
+              Virupakshapura, Bengaluru – 560 097
+            </p>
+          </div>
+        </div>
+
+        <div class="loc-item reveal d1">
+          <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-1.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <p class="loc-lbl">Phone</p>
+            <p class="loc-val"><a href="tel:+919779354926">+91 97793 54926</a></p>
+          </div>
+        </div>
+
+        <div class="loc-item reveal d2">
+          <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <div>
+            <p class="loc-lbl">Instagram</p>
+            <p class="loc-val">
+              <a href="https://www.instagram.com/the_styling_bar____/" target="_blank" rel="noopener noreferrer">
+                @the_styling_bar____
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="reveal d3">
+          <div class="hours-card">
+            <p class="hours-title">Opening Hours</p>
+            <div class="hour-row"><span class="day">Monday – Friday</span><span>10:00 AM – 9:00 PM</span></div>
+            <div class="hour-row"><span class="day">Saturday</span><span>9:00 AM – 9:00 PM</span></div>
+            <div class="hour-row"><span class="day">Sunday</span><span>10:00 AM – 7:00 PM</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal d2">
+        <a href="https://maps.google.com/?q=28+Kodigehalli+Thindlu+Main+Rd+Virupakshapura+Bengaluru+560097"
+           class="map-btn" target="_blank" rel="noopener noreferrer"
+           aria-label="Open location in Google Maps">
+          <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p>28, Kodigehalli – Thindlu Main Rd<br>Virupakshapura, Bengaluru</p>
+          <span class="dir">Get Directions →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── FOOTER ────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="ft-top">
+      <div>
+        <div class="ft-brand">The Styling <em>Bar</em></div>
+        <p class="ft-tag">Where heritage meets precision. — Bengaluru</p>
+      </div>
+
+      <nav class="ft-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+        <a href="https://wa.me/919779354926?text=Hi%20Suraj%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer">Book Now</a>
+      </nav>
+
+      <div class="ft-social">
+        <a href="https://www.instagram.com/the_styling_bar____/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Follow The Styling Bar on Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <p class="ft-copy">© <span id="ft-year"></span> The Styling Bar · Suraj Arora</p>
+      <p class="ft-addr">28, Kodigehalli – Thindlu Main Rd, Virupakshapura, Bengaluru – 560 097</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ─── SCRIPTS ───────────────────────────────────── -->
+<script>
+(function () {
+  'use strict';
+
+  const prefersReducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── Copyright year ── */
+  document.getElementById('ft-year').textContent = new Date().getFullYear();
+
+  /* ── NAV scroll state ── */
+  const nav = document.getElementById('nav');
+  function updateNav() {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
+  /* ── Hamburger / mobile menu ── */
+  const ham       = document.getElementById('ham');
+  const menu      = document.getElementById('mobile-menu');
+  const closeBtn  = document.getElementById('menu-close');
+  const mmLinks   = menu.querySelectorAll('.mm-link');
+
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    ham.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  ham.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  closeBtn.addEventListener('click', () => setMenu(false));
+  mmLinks.forEach(l => l.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') setMenu(false);
+  });
+
+  /* ── Scroll reveal ── */
+  if (!prefersReducedMotion) {
+    const ro = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          ro.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  /* ── Hero parallax (subtle) ── */
+  if (!prefersReducedMotion) {
+    const heroBg  = document.getElementById('hero-bg');
+    const heroSec = document.getElementById('hero');
+    if (heroBg) {
+      window.addEventListener('scroll', () => {
+        const sy = window.scrollY;
+        if (sy < heroSec.offsetHeight) {
+          heroBg.style.transform = `scale(1.06) translateY(${sy * 0.22}px)`;
+        }
+      }, { passive: true });
+    }
+  }
+
+  /* ── Dot reveal canvas ── */
+  if (window.matchMedia('(pointer: fine)').matches && !prefersReducedMotion) {
+    const canvas  = document.getElementById('dot-reveal');
+    const ctx     = canvas.getContext('2d');
+    const heroSec = document.getElementById('hero');
+
+    /* ── Suppress list: torch hides when cursor is over these ── */
+    const SUPPRESS_TAGS = new Set([
+      'a','button','img','input','textarea','select','video','nav','footer'
+    ]);
+    const SUPPRESS_CLASSES = new Set([
+      'svc-card','gallery-item','hours-card','map-btn',
+      'about-img-wrap','about-badge',
+      'ig-marquee-item','ig-cta',
+      'hamburger','mobile-menu'
+    ]);
+
+    function isOverContent(el) {
+      let node = el;
+      while (node && node !== document.body) {
+        if (!node.tagName) { node = node.parentElement; continue; }
+        if (SUPPRESS_TAGS.has(node.tagName.toLowerCase())) return true;
+        if (node.classList) {
+          for (const c of node.classList) {
+            if (SUPPRESS_CLASSES.has(c)) return true;
+          }
+        }
+        node = node.parentElement;
+      }
+      return false;
+    }
+
+    /* ── Config ── */
+    const N_DOTS   = 300;
+    const REVEAL_R = 185;   // torch radius (px)
+    const REPEL_R  = 68;    // avoidance radius — dots flee within this distance
+    const REPEL_F  = 5.5;   // avoidance push strength
+    const SPRING_K = 0.055; // spring-back stiffness (to rest position)
+    const DAMPING  = 0.76;  // velocity friction per frame
+
+    let W, H, dots = [];
+
+    function build() {
+      W = canvas.width  = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+
+      /* Grid-jitter distribution: more uniform spread than pure random */
+      const aspect = W / H;
+      const cols   = Math.round(Math.sqrt(N_DOTS * aspect));
+      const rows   = Math.ceil(N_DOTS / cols);
+      const cw = W / cols, ch = H / rows;
+
+      dots = [];
+      for (let r = 0; r < rows && dots.length < N_DOTS; r++) {
+        for (let c = 0; c < cols && dots.length < N_DOTS; c++) {
+          const x0 = (c + 0.15 + Math.random() * 0.7) * cw;
+          const y0 = (r + 0.15 + Math.random() * 0.7) * ch;
+          dots.push({ x0, y0, x: x0, y: y0,
+                      r: 0.8 + Math.random() * 1.4, vx: 0, vy: 0 });
+        }
+      }
+    }
+
+    build();
+    window.addEventListener('resize', build, { passive: true });
+
+    /* State */
+    let cx = -REVEAL_R * 2, cy = -REVEAL_R * 2;
+    /* Reveal-centre spring state — gives the torch momentum, not a robotic lerp */
+    let rx = cx, ry = cy, rvx = 0, rvy = 0;
+    let active = false, inHero = false, overContent = false, wantVisible = false;
+
+    function setVisible(v) {
+      if (v === wantVisible) return;
+      wantVisible = v;
+      /* Fade in leisurely; snap out quickly when crossing into content */
+      canvas.style.transition = v ? 'opacity 0.65s ease' : 'opacity 0.18s ease';
+      canvas.style.opacity    = v ? '1' : '0';
+    }
+
+    window.addEventListener('mousemove', e => {
+      cx = e.clientX; cy = e.clientY;
+      if (!active) active = true;
+
+      /* Hero check: disable effect inside the hero section */
+      const hr = heroSec.getBoundingClientRect();
+      inHero = cy >= hr.top && cy <= hr.bottom &&
+               cx >= hr.left && cx <= hr.right;
+
+      /* Content check: get element below the canvas (skip canvas itself) */
+      const pts = document.elementsFromPoint(cx, cy);
+      const el  = pts.find(e => e !== canvas) || null;
+      overContent = isOverContent(el);
+    }, { passive: true });
+
+    document.addEventListener('mouseleave', () => setVisible(false));
+    document.addEventListener('mouseenter', () => {
+      if (active && !inHero && !overContent) setVisible(true);
+    });
+
+    (function tick() {
+      /* Spring-based reveal centre: stiffness + damping gives organic momentum.
+         The torch swings toward the cursor, slightly overshoots, settles. */
+      rvx += (cx - rx) * 0.12; rvy += (cy - ry) * 0.12;
+      rvx *= 0.82;              rvy *= 0.82;
+      rx  += rvx;               ry  += rvy;
+
+      const shouldShow = active && !inHero && !overContent;
+      setVisible(shouldShow);
+
+      ctx.clearRect(0, 0, W, H);
+
+      if (shouldShow) {
+        dots.forEach(d => {
+          /* Avoidance: dot flees cursor when it gets too close */
+          const ddx = d.x - rx, ddy = d.y - ry;
+          const dd  = Math.sqrt(ddx * ddx + ddy * ddy);
+          if (dd < REPEL_R && dd > 0.1) {
+            const f = (1 - dd / REPEL_R) * REPEL_F;
+            d.vx += (ddx / dd) * f;
+            d.vy += (ddy / dd) * f;
+          }
+
+          /* Spring back toward rest position */
+          d.vx += (d.x0 - d.x) * SPRING_K;
+          d.vy += (d.y0 - d.y) * SPRING_K;
+
+          /* Integrate with damping */
+          d.vx *= DAMPING; d.vy *= DAMPING;
+          d.x  += d.vx;   d.y  += d.vy;
+
+          /* Opacity by distance from reveal centre:
+             close to cursor = most opaque (darkest brass),
+             far = fades to transparent.
+             Smoothstep gives a natural, non-linear falloff. */
+          const rdx = d.x - rx, rdy = d.y - ry;
+          const dist = Math.sqrt(rdx * rdx + rdy * rdy);
+          if (dist >= REVEAL_R) return;
+
+          const t      = 1 - dist / REVEAL_R;
+          const smooth = t * t * (3 - 2 * t);     // smoothstep
+          const alpha  = smooth * 0.88;
+
+          ctx.beginPath();
+          ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(184,137,42,${alpha.toFixed(3)})`;
+          ctx.fill();
+        });
+      }
+
+      requestAnimationFrame(tick);
+    })();
+  }
+
+  /* ── Floating booking chip ── */
+  (function () {
+    const chip    = document.getElementById('book-chip');
+    const hero    = document.getElementById('hero');
+    const booking = document.getElementById('booking');
+
+    let heroGone    = false;
+    let bookingOpen = false;
+
+    function sync() {
+      chip.classList.toggle('chip-visible', heroGone && !bookingOpen);
+    }
+
+    /* Show chip once hero has fully scrolled off screen */
+    new IntersectionObserver(entries => {
+      heroGone = !entries[0].isIntersecting;
+      sync();
+    }, { threshold: 0.05 }).observe(hero);
+
+    /* Hide chip while the booking section itself is visible */
+    new IntersectionObserver(entries => {
+      bookingOpen = entries[0].isIntersecting;
+      sync();
+    }, { threshold: 0.15 }).observe(booking);
+  })();
+
+  /* ── Testimonials stack carousel (mobile only) ── */
+  (function () {
+    if (!window.matchMedia('(max-width: 900px)').matches) return;
+
+    const grid  = document.querySelector('.testi-grid');
+    const cards = Array.from(grid.querySelectorAll('.testi-card'));
+    const dots  = Array.from(document.querySelectorAll('.testi-dot'));
+    const n     = cards.length; // 3
+    let current = 0;
+
+    // Bypass scroll-reveal on all cards — stack opacity controls visibility instead
+    cards.forEach(c => c.classList.add('in'));
+
+    function applyStack() {
+      cards.forEach((c, i) => {
+        const offset = (i - current + n) % n;
+        c.dataset.stack = offset === 0 ? 'top'
+                        : offset === 1 ? 'mid'
+                        : offset === 2 ? 'bot'
+                        : 'gone';
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    function setGridHeight() {
+      // top card is absolutely positioned with width:100% — offsetHeight is reliable
+      const h = cards[current].offsetHeight;
+      grid.style.height = (h + 28) + 'px'; // 28px = max visual stack depth
+    }
+
+    function advance() {
+      current = (current + 1) % n;
+      applyStack();
+    }
+
+    /* ── Touch handling ── */
+    let startX = 0, startY = 0;
+    let dragging = false, scrolling = false;
+    let activeCard = null;
+
+    grid.addEventListener('touchstart', e => {
+      activeCard = cards.find(c => c.dataset.stack === 'top') || null;
+      if (!activeCard) return;
+      startX    = e.touches[0].clientX;
+      startY    = e.touches[0].clientY;
+      dragging  = false;
+      scrolling = false;
+    }, { passive: true });
+
+    grid.addEventListener('touchmove', e => {
+      if (!activeCard || scrolling) return;
+      const dx = e.touches[0].clientX - startX;
+      const dy = e.touches[0].clientY - startY;
+
+      // First significant move determines intent — vertical wins → page scroll
+      if (!dragging && Math.abs(dy) > Math.abs(dx) + 4) { scrolling = true; return; }
+      if (Math.abs(dx) < 6 && !dragging) return; // wait for clear horizontal start
+
+      dragging = true;
+      e.preventDefault(); // prevent page scroll while dragging card
+      activeCard.classList.add('is-dragging');
+      activeCard.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`;
+    }, { passive: false });
+
+    grid.addEventListener('touchend', e => {
+      if (!activeCard || !dragging) {
+        activeCard = null; dragging = false; scrolling = false; return;
+      }
+
+      const dx     = e.changedTouches[0].clientX - startX;
+      const flyOff = Math.abs(dx) > 80;
+      const card   = activeCard;
+
+      card.classList.remove('is-dragging');
+      activeCard = null; dragging = false; scrolling = false;
+
+      if (flyOff) {
+        if (!prefersReducedMotion) {
+          const dir = dx > 0 ? 1 : -1;
+          card.style.transition = 'transform .32s var(--ease-out), opacity .32s';
+          card.style.transform  = `translateX(${dir * 420}px) rotate(${dir * 18}deg)`;
+          card.style.opacity    = '0';
+          setTimeout(() => {
+            card.style.transition = '';
+            card.style.transform  = '';
+            card.style.opacity    = '';
+            advance();
+          }, 320);
+        } else {
+          card.style.transform = '';
+          advance();
+        }
+      } else {
+        // Under threshold — spring back via CSS transition
+        card.style.transform = '';
+      }
+    });
+
+    // Init: assign stack positions, then measure height.
+    // setGridHeight() is called synchronously (forces reflow) AND after fonts load
+    // so the grid height is always correct regardless of webfont timing.
+    applyStack();
+    setGridHeight();
+    document.fonts.ready.then(setGridHeight);
+  })();
+
+})();
+</script>
+</body>
+</html>
